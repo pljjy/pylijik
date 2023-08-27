@@ -1,0 +1,6 @@
+- add logging
+- add a non cringe way of stopping the bot
+
+- make it play songs from: spotify, soundcloud, youtube (including playlists)
+- add minesweeper
+- add yokes for fanatbI

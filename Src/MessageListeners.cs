@@ -1,5 +1,6 @@
 using DSharpPlus;
 using DSharpPlus.EventArgs;
+using Serilog;
 using static Pylijik.Program;
 
 namespace Pylijik;
@@ -11,7 +12,7 @@ public class MessageListeners
         if (msg.Author.IsBot) return;
 
         await msg.Message.RespondAsync(msg.Message.Content);
-        Console.WriteLine($"responded to {msg.Author}\ntext - \"{msg.Message.Content}\"");
+        Log.Logger.Information($"echoed to \nuser - {msg.Author}\ntext - \"{msg.Message.Content}\"");
     }
 
     // TODO: find a better way to stop bot, this one is cringe asf AND not asynchronous
